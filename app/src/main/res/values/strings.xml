@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">VerOS_2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="desktop">
+        <item>Windows</item>
+        <item>Linux</item>
+        <item>OS X</item>
+
+    </string-array>
+
+    <string-array name="mobile">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>Symbian</item>
+        <item>Blackberry OS</item>
+
+    </string-array>
+
+
+</resources>

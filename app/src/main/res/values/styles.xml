@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+
+    <style name="AppBaseTheme" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme" parent="AppBaseTheme"/>
+
+</resources>
