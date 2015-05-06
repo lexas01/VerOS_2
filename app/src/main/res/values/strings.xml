@@ -18,6 +18,47 @@
         <item>Blackberry OS</item>
 
     </string-array>
+    <string name="title_activity_main_activity2">Versiones</string>
+    <string name="title_activity_main_activity3">Detalles</string>
+
+    <string-array name="Windows">
+        <item>Windows ms-dos</item>
+        <item>Windows 3.0</item>
+        <item>Windows NT</item>
+        <item>Windows 95</item>
+        <item>Windows 98</item>
+        <item>Windows XP</item>
+        <item>Windows Vista</item>
+        <item>Windows 7</item>
+        <item>Windows 8</item>
+
+    </string-array>
+
+    <string-array name="Linux">
+        <item>Linux ms-dos</item>
+        <item>Linux 3.0</item>
+        <item>Linux NT</item>
+        <item>Linux 95</item>
+        <item>Linux 98</item>
+        <item>Linux XP</item>
+        <item>Linux Vista</item>
+        <item>Linux 7</item>
+        <item>Linux 8</item>
+
+    </string-array>
+
+    <string-array name="OSX">
+        <item>Mac ms-dos</item>
+        <item>Mac 3.0</item>
+        <item>Mac NT</item>
+        <item>Mac 95</item>
+        <item>Mac 98</item>
+        <item>Mac XP</item>
+        <item>Mac Vista</item>
+        <item>Mac 7</item>
+        <item>Mac 8</item>
+
+    </string-array>
 
 
 </resources>

@@ -1,5 +1,7 @@
 package com.n00b.games.saelaharafat.veros_2;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,10 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
+    public static String rsc;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+               spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.desktop, android.R.layout.simple_spinner_item);
@@ -28,6 +33,8 @@ public class MainActivity extends ActionBarActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        rsc = (String)  spinner.getSelectedItem();
 
 
 
@@ -57,6 +64,14 @@ public class MainActivity extends ActionBarActivity {
             System.exit(0);
             return true;
         }
+        if (id == R.id.verOS) {
+
+
+            Intent itn=new Intent(this,MainActivity2.class);
+            itn.putExtra("sistema",rsc);
+
+            startActivity(itn);
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -67,7 +82,7 @@ public class MainActivity extends ActionBarActivity {
 
         if (on) {
 
-            Spinner spinner = (Spinner) findViewById(R.id.spinner);
+             spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                     R.array.mobile, android.R.layout.simple_spinner_item);
@@ -78,9 +93,10 @@ public class MainActivity extends ActionBarActivity {
 // Apply the adapter to the spinner
             spinner.setAdapter(adapter);
             // Enable vibrate
+            rsc = (String)  spinner.getSelectedItem();
         } else {
 
-            Spinner spinner = (Spinner) findViewById(R.id.spinner);
+             spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                     R.array.desktop, android.R.layout.simple_spinner_item);
@@ -92,10 +108,24 @@ public class MainActivity extends ActionBarActivity {
             spinner.setAdapter(adapter);
 
             // Disable vibrate
+            rsc = (String)  spinner.getSelectedItem();
         }
     }
 
     @Override
     public void onBackPressed() {
+        Context context = getApplicationContext();
+        CharSequence text = "No morro!!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        rsc = (String)  spinner.getSelectedItem();
+
     }
 }
